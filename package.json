@@ -1,0 +1,21 @@
+{
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "mnist": "bower:mnist@^1.0.2",
+      "nervous": "github:hourliert/nervous@master"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.0-dev.20150818"
+    },
+    "overrides": {
+      "github:hourliert/nervous@master": {
+        "registry": "npm"
+      }
+    }
+  },
+  "devDependencies": {
+    "jspm": "^0.16.0",
+    "jspm-bower-endpoint": "^0.3.2"
+  }
+}
