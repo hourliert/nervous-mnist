@@ -28,7 +28,7 @@ System.config({
   map: {
     "mnist": "bower:mnist@1.0.2",
     "nervous": "github:hourliert/nervous@master",
-    "typescript": "npm:typescript@1.6.0-dev.20150824",
+    "typescript": "npm:typescript@1.6.0-dev.20150825",
     "github:hourliert/nervous@master": {
       "nervous-array": "github:hourliert/nervous-array@1.1.4",
       "nervous-sigmoid": "github:hourliert/nervous-sigmoid@1.0.2",
@@ -57,7 +57,7 @@ System.config({
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:typescript@1.6.0-dev.20150824": {
+    "npm:typescript@1.6.0-dev.20150825": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
