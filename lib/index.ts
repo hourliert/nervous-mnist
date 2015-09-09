@@ -24,8 +24,10 @@ export function bootstrap () {
   var testSet = set.test;
   
   for (var i = 0; i < 10; i++) {
-    var digit = trainingSet[i].input,
-        value = digitToNumber(trainingSet[i].output).toString();
+    // var digit = trainingSet[i].input,
+    //     value = digitToNumber(trainingSet[i].output).toString();
+      var digit = mnist[i].get(),
+          value = i.toString();
  
     var el: HTMLCanvasElement = <HTMLCanvasElement>document.getElementById('canvas' + i),
         span: HTMLElement = document.getElementById('value' + i);
