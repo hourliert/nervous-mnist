@@ -2,7 +2,7 @@
   "jspm": {
     "directories": {},
     "dependencies": {
-      "mnist": "bower:mnist@^1.0.2",
+      "mnist-data": "github:hourliert/mnist-data@master",
       "nervous": "github:hourliert/nervous@master"
     },
     "devDependencies": {
@@ -16,7 +16,6 @@
   },
   "devDependencies": {
     "jspm": "^0.16.0",
-    "jspm-bower-endpoint": "^0.3.2",
     "jspm-github": "^0.13.4"
   }
 }

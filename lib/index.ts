@@ -1,48 +1,42 @@
 /// <reference path="./all.d.ts" />
 
-import * as mnist from 'mnist';
+import {MnistData} from 'mnist-data';
 import {NeuralNetwork} from 'nervous';
 
-function digitToNumber (digits: number[]): number {
-  var res = -1;
+// console.log();
+
+// function digitToNumber (digits: number[]): number {
+//   var res = -1;
   
-  digits.forEach((x, i) => {
-    if (x !== 0) {
-      res = i;
-    }
-  });
+//   digits.forEach((x, i) => {
+//     if (x !== 0) {
+//       res = i;
+//     }
+//   });
   
-  console.log(res);
-  return res;
-}
+//   console.log(res);
+//   return res;
+// }
 
 export function bootstrap () {
   
-  var set = mnist.set(8000, 2000);
+  var mnist = new MnistData(1),
+      digit = mnist.getOneTraining();
+      
+  var el: HTMLCanvasElement = <HTMLCanvasElement>document.getElementById('canvas'),
+      span: HTMLElement = document.getElementById('value');
+      
+  span.textContent = digit.value.toString();
   
-  var trainingSet = set.training;
-  var testSet = set.test;
+  var context = el.getContext('2d');
   
-  for (var i = 0; i < 10; i++) {
-    // var digit = trainingSet[i].input,
-    //     value = digitToNumber(trainingSet[i].output).toString();
-      var digit = mnist[i].get(),
-          value = i.toString();
- 
-    var el: HTMLCanvasElement = <HTMLCanvasElement>document.getElementById('canvas' + i),
-        span: HTMLElement = document.getElementById('value' + i);
-        
-    span.textContent = value;
-    
-    var context = el.getContext('2d');
-    
-    context.fillStyle = 'white';
-    context.fillRect(0, 0, el.width, el.height);
-    
-    console.info('Drawing...');
-    mnist.draw(digit, context, 0, 0); // draws a '1' mnist digit in the canvas
+  context.fillStyle = 'white';
+  context.fillRect(0, 0, el.width, el.height);
   
-    // (<any>context).imageSmoothingEnabled = true;
-    context.drawImage( el, 0, 0, 4*el.width, 4*el.height );
-  }  
+  console.info('Drawing...');
+  
+  MnistData.draw(digit.pixels, context, 0, 0); // draws a '1' mnist digit in the canvas
+
+  // (<any>context).imageSmoothingEnabled = true;
+  context.drawImage( el, 0, 0, 4*el.width, 4*el.height );
 }
