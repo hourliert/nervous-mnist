@@ -3,21 +3,6 @@
 import {MnistData} from 'mnist-data';
 import {NeuralNetwork} from 'nervous';
 
-// console.log();
-
-// function digitToNumber (digits: number[]): number {
-//   var res = -1;
-  
-//   digits.forEach((x, i) => {
-//     if (x !== 0) {
-//       res = i;
-//     }
-//   });
-  
-//   console.log(res);
-//   return res;
-// }
-
 export function bootstrap () {
   
   var mnist = new MnistData(1),
@@ -35,8 +20,7 @@ export function bootstrap () {
   
   console.info('Drawing...');
   
-  MnistData.draw(digit.pixels, context, 0, 0); // draws a '1' mnist digit in the canvas
+  MnistData.draw(digit.pixels, context, 0, 0);
 
-  // (<any>context).imageSmoothingEnabled = true;
   context.drawImage( el, 0, 0, 4*el.width, 4*el.height );
 }
