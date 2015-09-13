@@ -17,5 +17,9 @@
   "devDependencies": {
     "jspm": "^0.16.0",
     "jspm-github": "^0.13.4"
+  },
+  "dependencies": {
+    "mnist-data": "git+https://github.com/hourliert/mnist-data.git",
+    "nervous": "git+https://github.com/hourliert/nervous.git"
   }
 }

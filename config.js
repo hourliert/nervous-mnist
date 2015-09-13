@@ -27,7 +27,7 @@ System.config({
   map: {
     "mnist-data": "github:hourliert/mnist-data@master",
     "nervous": "github:hourliert/nervous@master",
-    "typescript": "npm:typescript@1.6.0-dev.20150910",
+    "typescript": "npm:typescript@1.6.0-dev.20150913",
     "github:hourliert/mnist-data@master": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "lodash": "npm:lodash@3.10.1",
@@ -127,7 +127,7 @@ System.config({
     "npm:string_decoder@0.10.31": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
-    "npm:typescript@1.6.0-dev.20150910": {
+    "npm:typescript@1.6.0-dev.20150913": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
